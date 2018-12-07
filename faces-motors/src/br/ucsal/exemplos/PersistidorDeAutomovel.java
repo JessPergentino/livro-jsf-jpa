@@ -1,4 +1,4 @@
-package br.ucsal.dao;
+package br.ucsal.exemplos;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
@@ -21,7 +21,7 @@ public class PersistidorDeAutomovel {
 		auto.setMarca("Chevrolet");
 		auto.setObservacoes("Nunca foi batido");
 		
-		//Iniciando a transação
+		//Iniciando a transação - Insert
 		EntityTransaction tx = em.getTransaction();
 		tx.begin();
 		em.persist(auto);
