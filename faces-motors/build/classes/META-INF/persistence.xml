@@ -7,6 +7,9 @@
 
 	<persistence-unit name="default">
 		<properties>
+
+			<!-- Propriedades para configuração da conexão com o banco de dados - 
+				PostgresSQL -->
 			<property name="javax.persistence.jdbc.driver"
 				value="org.postgresql.Driver" /> <!-- DB Driver -->
 			<property name="javax.persistence.jdbc.url"
@@ -15,10 +18,14 @@
 				value="postgres" /> <!-- DB User -->
 			<property name="javax.persistence.jdbc.password"
 				value="270297neves" /> <!-- DB Password -->
+
+			<!-- Propriedades de Configuração para uso do Hibernate com o PostegresSQL -->
 			<property name="hibernate.dialect"
 				value="org.hibernate.dialect.PostgreSQLDialect" />
-
 			<property name="hibernate.hbm2ddl.auto" value="update" />
+			<property name="hibernate.show_sql" value="true" />
+			<property name="hibernate.format_sql" value="true" />
+
 		</properties>
 	</persistence-unit>
 </persistence>
