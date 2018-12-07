@@ -20,7 +20,7 @@
 			<br />
 	Observações: <h:inputTextarea value="#{automovelBean.automovel.observacoes}" />
 			<br />
-			<h:commandButton value="Salvar" action="#{automovelBean.salva}"></h:commandButton>
+			<h:commandButton value="Salvar" action="#{automovelBean.salva(automovelBean.automovel)}"></h:commandButton>
 		</h:panelGrid>
 	</h:form>
 
