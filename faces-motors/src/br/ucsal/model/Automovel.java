@@ -7,7 +7,8 @@ import javax.persistence.Id;
 @Entity
 public class Automovel {
 
-	@Id @GeneratedValue
+	@Id
+	@GeneratedValue
 	private Long id;
 	private String marca;
 	private String modelo;
@@ -62,5 +63,5 @@ public class Automovel {
 	public void setObservacoes(String observacoes) {
 		this.observacoes = observacoes;
 	}
-	
+
 }

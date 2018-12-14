@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+	<title>Lista de Automovel</title>
+</h:head>
+<h:body>
+	<h:form>
+		<h:dataTable value="#{automovelBean.automoveis}" var="automovel"
+			border="1">
+			<h:column>
+				<f:facet name="header">
+				Marca
+			</f:facet>
+				<h:outputText value="#{automovel.marca}" />
+			</h:column>
+			<h:column>
+				<f:facet name="header">
+				Modelo
+			</f:facet>
+				<h:outputText value="#{automovel.modelo}" />
+			</h:column>
+			<h:column>
+				<f:facet name="header">
+				Ano Fabricação
+			</f:facet>
+				<h:outputText value="#{automovel.anoFabricacao}" />
+			</h:column>
+			<h:column>
+				<f:facet name="header">
+				Ano Modelo
+			</f:facet>
+				<h:outputText value="#{automovel.anoModelo}" />
+			</h:column>
+			<h:column>
+				<f:facet name="header">
+				Observações
+			</f:facet>
+				<h:outputText value="#{automovel.observacoes}" />
+			</h:column>
+			<h:column>
+				<f:facet name="header">Ações</f:facet>
+				<h:commandLink action="#{automovelBean.excluir(automovel)}">
+				Excluir
+			</h:commandLink>
+			</h:column>
+		</h:dataTable>
+	</h:form>
+</h:body>
+</html>
